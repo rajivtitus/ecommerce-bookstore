@@ -23,7 +23,7 @@ const Navbar = (): ReactElement => {
 
 	return (
 		<nav>
-			<ul className="flex p-4 mb-8">
+			<ul className="flex px-6 pt-4 mb-4">
 				{NAV_ITEMS.map((link, index) => (
 					<li
 						key={index}
