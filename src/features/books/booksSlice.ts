@@ -31,7 +31,7 @@ const booksSlice = createSlice({
 			})
 			.addCase(fetchBooks.fulfilled, (state, action) => {
 				state.status = Status.Fulfilled;
-				state.books = state.books.concat(action.payload);
+				state.books = action.payload;
 			})
 			.addCase(fetchBooks.rejected, (state, action) => {
 				state.status = Status.Rejected;
