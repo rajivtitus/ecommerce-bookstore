@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-import { Paths } from "../../utils/constants";
+import { Paths } from "../../utils/types";
 
 const Landing = (): ReactElement => {
 	return (

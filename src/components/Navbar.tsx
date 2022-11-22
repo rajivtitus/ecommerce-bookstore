@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { NavItems, Paths } from "../utils/constants";
+import { NavItems, Paths } from "../utils/types";
 
 const NAV_ITEMS = [
 	{

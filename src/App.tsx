@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
-import { Paths } from "./utils/constants";
+import { Paths } from "./utils/types";
 import Home from "./routes/Home";
 import Products from "./routes/Products";
 import Cart from "./routes/Cart";

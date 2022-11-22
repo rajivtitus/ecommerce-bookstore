@@ -1,3 +1,15 @@
+export interface Book {
+	id: number;
+	title: string;
+	author: {
+		name: string;
+		image?: string;
+	};
+	price: number;
+	description: string;
+	coverImage: string;
+}
+
 export enum Paths {
 	Home = "/",
 	Cart = "/cart",
