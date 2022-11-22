@@ -1,11 +1,14 @@
 import { ReactElement } from "react";
 
 import Layout from "../components/Layout";
+import Featured from "../components/Home/Featured";
+import Landing from "../components/Home/Landing";
 
 const Home = (): ReactElement => {
 	return (
 		<Layout>
-			<h2>This is the home page!</h2>
+			<Landing />
+			<Featured />
 		</Layout>
 	);
 };
