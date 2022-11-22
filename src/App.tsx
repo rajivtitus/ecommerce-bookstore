@@ -1,22 +1,37 @@
-import { useAppSelector, useAppDispatch } from "./app/hooks";
-import { increment } from "./features/counter/counterSlice";
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+
+import { Paths } from "./utils/constants";
+import Home from "./routes/Home";
+import Products from "./routes/Products";
+import Cart from "./routes/Cart";
+import ProductDetails from "./routes/ProductDetails";
+import ErrorPage from "./routes/ErrorPage";
 
 function App() {
-	const count = useAppSelector((state) => state.counter.value);
-	const dispatch = useAppDispatch();
+	const router = createBrowserRouter([
+		{
+			path: Paths.Home,
+			element: <Home />,
+		},
+		{
+			path: Paths.Products,
+			element: <Products />,
+		},
+		{
+			path: Paths.Cart,
+			element: <Cart />,
+		},
+		{
+			path: Paths.ProductDetails,
+			element: <ProductDetails />,
+		},
+		{
+			path: Paths.Other,
+			element: <ErrorPage />,
+		},
+	]);
 
-	const handleCount = () => {
-		dispatch(increment());
-	};
-
-	return (
-		<div>
-			<p>Bookworm The E-commerce Bookstore</p>
-			<button className="bg-blue-500 py-2 px-4 rounded" onClick={handleCount}>
-				Count is {count}
-			</button>
-		</div>
-	);
+	return <RouterProvider router={router} />;
 }
 
 export default App;
