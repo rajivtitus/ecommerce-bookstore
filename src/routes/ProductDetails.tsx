@@ -1,10 +1,12 @@
 import { ReactElement } from "react";
 
+import Layout from "../components/Layout";
+
 const ProductDetails = (): ReactElement => {
 	return (
-		<div>
+		<Layout>
 			<h2>This is the product details page!</h2>
-		</div>
+		</Layout>
 	);
 };
 
