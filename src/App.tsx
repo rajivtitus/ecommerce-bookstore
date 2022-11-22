@@ -1,4 +1,3 @@
-import "./App.css";
 import { useAppSelector, useAppDispatch } from "./app/hooks";
 import { increment } from "./features/counter/counterSlice";
 
@@ -11,7 +10,7 @@ function App() {
 	};
 
 	return (
-		<div className="App">
+		<div>
 			<p>Bookworm The E-commerce Bookstore</p>
 			<button className="bg-blue-500 py-2 px-4 rounded" onClick={handleCount}>
 				Count is {count}
