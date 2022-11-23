@@ -14,7 +14,6 @@ interface Props {
 }
 
 const CartRecord = ({ item }: Props): ReactElement => {
-	const price = (item.quantity * item.price).toFixed(2);
 	const dispatch = useAppDispatch();
 
 	const handleDecrement = () => {
@@ -46,7 +45,7 @@ const CartRecord = ({ item }: Props): ReactElement => {
 				</p>
 			</div>
 			<div className="w-3/12 flex flex-col">
-				<p className="text-lg font-bold">Price: ${price}</p>
+				<p className="text-lg font-bold">Price: ${item.price.toFixed(2)}</p>
 				<Quantity
 					quantity={item.quantity}
 					decrement={handleDecrement}
