@@ -1,9 +1,11 @@
 import { ReactElement } from "react";
+import { Link } from "react-router-dom";
 
 import Layout from "../components/Layout";
 import { useAppSelector } from "../app/hooks";
 import { calcCartTotal } from "../utils/helpers";
 import CartRecord from "../components/Cart/CartRecord";
+import { Paths } from "../utils/types";
 
 const Cart = (): ReactElement => {
 	const cartItems = useAppSelector((state) => state.checkout.cart);
@@ -29,9 +31,16 @@ const Cart = (): ReactElement => {
 					</div>
 				</>
 			) : (
-				<h4 className="text-2xl text-center">
-					There are currently no items in your cart
-				</h4>
+				<div className="py-16 text-center">
+					<h4 className="mb-8 text-2xl ">
+						There are currently no items in your cart
+					</h4>
+					<Link to={Paths.Products}>
+						<button className="px-4 py-2 bg-primary text-lg text-white rounded">
+							Shop Now
+						</button>
+					</Link>
+				</div>
 			)}
 		</Layout>
 	);
