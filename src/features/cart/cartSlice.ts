@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { Book, NavItems } from "../../utils/types";
+import { Book } from "../../utils/types";
 
 interface CartItem extends Book {
 	quantity: number;

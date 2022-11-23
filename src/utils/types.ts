@@ -23,10 +23,3 @@ export enum NavItems {
 	Products = "Products",
 	Cart = "Cart",
 }
-
-export enum Status {
-	Idle = "idle",
-	Pending = "pending",
-	Fulfilled = "fulfilled",
-	Rejected = "rejected",
-}
