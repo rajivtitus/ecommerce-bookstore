@@ -34,35 +34,6 @@ export const mockBooks: Book[] = [
 	},
 	{
 		id: 3,
-		title: "12 Rules For Life",
-		author: {
-			name: "Jordan B. Peterson",
-			image:
-				"https://user-images.githubusercontent.com/75184965/203395255-578b4867-724e-4a3b-9027-fbec01163cf2.jpg",
-		},
-		price: 21.08,
-		description: `Humorous, surprising and informative, Dr. Peterson tells us why skateboarding boys and girls must be left alone, what terrible fate awaits those who criticize too easily, and why you should always pet a cat when you meet one on the street. \n
-      What does the nervous system of the lowly lobster have to tell us about standing up straight (with our shoulders back) and about success in life? Why did ancient Egyptians worship the capacity to pay careful attention as the highest of gods? What dreadful paths do people tread when they become resentful, arrogant and vengeful? \n
-      Dr. Peterson journeys broadly, discussing discipline, freedom, adventure and responsibility, distilling the world's wisdom into 12 practical and profound rules for life. 12 Rules for Life shatters the modern commonplaces of science, faith and human nature, while transforming and ennobling the mind and spirit of its readers. \n`,
-		coverImage:
-			"https://user-images.githubusercontent.com/75184965/203395263-99d38214-abaf-4a0e-b3a2-b9c3e3a241c0.jpeg",
-	},
-	{
-		id: 4,
-		title: "The Mountain Is You",
-		author: {
-			name: "Brianna Wiest",
-			image:
-				"https://user-images.githubusercontent.com/75184965/203395272-98ebe466-b97b-4547-8f86-fd7e202878fb.jpg",
-		},
-		price: 21.88,
-		description: `Coexisting but conflicting needs create self-sabotaging behaviors. This is why we resist efforts to change, often until they feel completely futile. But by extracting crucial insight from our most damaging habits, building emotional intelligence by better understanding our brains and bodies, releasing past experiences at a cellular level, and learning to act as our highest potential future selves, we can step out of our own way and into our potential. \n
-      For centuries, the mountain has been used as a metaphor for the big challenges we face, especially ones that seem impossible to overcome. To scale our mountains, we actually have to do the deep internal work of excavating trauma, building resilience, and adjusting how we show up for the climb. In the end, it is not the mountain we master, but ourselves. \n`,
-		coverImage:
-			"https://user-images.githubusercontent.com/75184965/203395257-216ed35e-e12e-4f4f-9a84-873b4db7b2d5.jpeg",
-	},
-	{
-		id: 5,
 		title: "Can't Hurt Me",
 		author: {
 			name: "David Goggins",
@@ -76,7 +47,7 @@ export const mockBooks: Book[] = [
 			"https://user-images.githubusercontent.com/75184965/203395268-13a3c827-0276-4c7c-8d23-4973f23b3d2d.jpeg",
 	},
 	{
-		id: 6,
+		id: 4,
 		title: "Desert Star",
 		author: {
 			name: "Michael Connelly",
@@ -91,24 +62,9 @@ export const mockBooks: Book[] = [
 		coverImage:
 			"https://user-images.githubusercontent.com/75184965/203395275-e9847ef6-9c89-4fa7-b0aa-5a8478f9c909.jpg",
 	},
+
 	{
-		id: 7,
-		title: "It Ends with Us",
-		author: {
-			name: "Colleen Hoover",
-			image:
-				"https://user-images.githubusercontent.com/75184965/203395277-b5c7ef81-e688-4c1d-94af-b4abd94b6840.jpg",
-		},
-		price: 36.99,
-		description: `Lily hasn’t always had it easy, but that’s never stopped her from working hard for the life she wants. She’s come a long way from the small town where she grew up—she graduated from college, moved to Boston, and started her own business. And when she feels a spark with a gorgeous neurosurgeon named Ryle Kincaid, everything in Lily’s life seems too good to be true. \n
-      Ryle is assertive, stubborn, maybe even a little arrogant. He’s also sensitive, brilliant, and has a total soft spot for Lily. And the way he looks in scrubs certainly doesn’t hurt. Lily can’t get him out of her head. But Ryle’s complete aversion to relationships is disturbing. Even as Lily finds herself becoming the exception to his “no dating” rule, she can’t help but wonder what made him that way in the first place. \n
-      As questions about her new relationship overwhelm her, so do thoughts of Atlas Corrigan—her first love and a link to the past she left behind. He was her kindred spirit, her protector. When Atlas suddenly reappears, everything Lily has built with Ryle is threatened. \n
-      An honest, evocative, and tender novel, It Ends with Us is “a glorious and touching read, a forever keeper. The kind of book that gets handed down” (USA TODAY). \n`,
-		coverImage:
-			"https://user-images.githubusercontent.com/75184965/203395278-9c29b738-cff3-4496-a910-f39a2d99cb6b.jpeg",
-	},
-	{
-		id: 8,
+		id: 5,
 		title: "Murder in Tuscany",
 		author: {
 			name: "T A Williams",
