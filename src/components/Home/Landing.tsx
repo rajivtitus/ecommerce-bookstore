@@ -7,8 +7,8 @@ import coverImg from "../../assets/hero-img.png";
 
 const Landing = (): ReactElement => {
 	return (
-		<div className="flex items-center justify-center h-full bg-lightGray rounded">
-			<div className="w-7/12 pt-6 px-12 xl:px-20 2xl:px-32">
+		<div className="flex items-center justify-center h-[calc(100vh-200px)] bg-lightGray rounded">
+			<div className="w-7/12 px-12 xl:px-20 2xl:px-32">
 				<h2 className="mb-6 text-4xl font-lora leading-8">
 					The best e-commerce bookstore!
 				</h2>
