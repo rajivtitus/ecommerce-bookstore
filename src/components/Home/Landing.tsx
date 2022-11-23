@@ -17,7 +17,7 @@ const Landing = (): ReactElement => {
 				</p>
 				<Link to={Paths.Products}>
 					<button className="px-4 py-2 bg-primary text-lg text-white rounded">
-						Shop Now
+						Explore Now
 					</button>
 				</Link>
 			</div>
