@@ -13,6 +13,9 @@ const Cart = (): ReactElement => {
 
 	return (
 		<Layout>
+			<h2 className="py-2 mb-8 text-center font-lora text-3xl">
+				Your Shopping Cart
+			</h2>
 			{cartItems.length ? (
 				<>
 					<div

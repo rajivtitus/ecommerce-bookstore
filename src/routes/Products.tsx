@@ -9,6 +9,7 @@ const Products = (): ReactElement => {
 
 	return (
 		<Layout>
+			<h2 className="py-2 mb-8 text-center font-lora text-3xl">Products</h2>
 			<div className="grid grid-cols-2 content-center xl:grid-cols-3 gap-16 px-6 pb-12">
 				{books.map((book) => (
 					<ProductCard book={book} key={book.id} />
