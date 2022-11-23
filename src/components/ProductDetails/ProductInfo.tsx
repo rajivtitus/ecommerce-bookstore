@@ -23,16 +23,16 @@ const ProductInfo = ({ book }: Props): ReactElement => {
 
 	return (
 		<div className="flex flex-col-reverse gap-10 pb-8 lg:gap-4 lg:flex-row">
-			<div className="w-full lg:w-3/5 px-12 py-6 bg-gray-100 rounded-md">
+			<div className="w-full lg:w-3/5 px-12 py-6 bg-gray-100 rounded">
 				<h3 className="py-1 font-lora text-3xl">{book.title}</h3>
 				<p className="py-1 italic text-lg text-gray-600">
 					By {book.author.name}
 				</p>
 				<p className="leading-7 whitespace-pre-line">{book.description}</p>
 			</div>
-			<div className="w-full px-2 py-6 md:w-4/6 m-auto lg:m-0 lg:w-2/5 lg:px-12">
+			<div className="w-full px-2 md:w-4/6 m-auto lg:m-0 lg:w-2/5 lg:px-12">
 				<img
-					className="w-full h-[35rem] m-auto object-contain lg:object-fill"
+					className="w-full h-[35rem] m-auto object-fill rounded"
 					src={book.coverImage}
 					alt={book.title}
 				/>
