@@ -33,7 +33,7 @@ const CartRecord = ({ item }: Props): ReactElement => {
 					alt={item.title}
 				/>
 			</div>
-			<div className="w-7/12 ">
+			<div className="w-7/12">
 				<h3 className="font-lora text-2xl">{item.title}</h3>
 				<p className="py-1 italic text-lg text-gray-600">
 					By {item.author.name}

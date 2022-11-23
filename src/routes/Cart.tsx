@@ -23,7 +23,7 @@ const Cart = (): ReactElement => {
 							<CartRecord item={item} key={item.id} />
 						))}
 					</div>
-					<div className="flex justify-end items-center gap-8 p-8 mr-12">
+					<div className="flex justify-end items-center gap-8 py-8 px-16 xl:px-24 2xl:px-36">
 						<p className="px-4 py-2 text-xl font-bold bg-primary text-white rounded ">
 							Total Price:
 						</p>

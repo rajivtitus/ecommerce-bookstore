@@ -9,7 +9,7 @@ const Products = (): ReactElement => {
 
 	return (
 		<Layout>
-			<div className="grid grid-cols-1 gap-16 px-6 pb-12 md:grid-cols-2 lg:grid-cols-3">
+			<div className="grid grid-cols-2 content-center xl:grid-cols-3 gap-16 px-6 pb-12">
 				{books.map((book) => (
 					<ProductCard book={book} key={book.id} />
 				))}

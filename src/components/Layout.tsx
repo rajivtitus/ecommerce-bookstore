@@ -7,9 +7,9 @@ interface Props {
 
 const Layout = ({ children }: Props): ReactElement => {
 	return (
-		<div className="max-w-screen-2xl min-h-screen m-auto ">
+		<div className="max-w-screen-2xl min-h-screen m-auto">
 			<Navbar />
-			<div className="px-6 py-4 h-[calc(100vh-55px)]">{children}</div>
+			<div className="px-12 py-4 h-[calc(100vh-55px)]">{children}</div>
 		</div>
 	);
 };

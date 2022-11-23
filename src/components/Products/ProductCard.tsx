@@ -10,7 +10,7 @@ interface Props {
 
 const ProductCard = ({ book }: Props): ReactElement => {
 	return (
-		<div className="w-full h-full max-w-md md:max-w-sm min-h-[25rem] max-h-[32rem] m-auto md:m-0 rounded-lg shadow-lg overflow-hidden cursor-pointer">
+		<div className="lg:w-full lg:h-full max-w-md min-h-[25rem] max-h-[32rem] m-auto rounded-lg shadow-lg overflow-hidden cursor-pointer">
 			<Link to={`${Paths.Products}/${book.id}`}>
 				<div className="h-4/5 flex justify-center p-4 bg-gray-200">
 					<img
