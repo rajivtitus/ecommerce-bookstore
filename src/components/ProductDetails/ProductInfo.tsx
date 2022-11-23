@@ -1,6 +1,9 @@
 import { ReactElement, useState } from "react";
 
 import { Book } from "../../utils/types";
+import { useAppDispatch } from "../../app/hooks";
+import { addToCart } from "../../features/cart/cartSlice";
+import Quantity from "../Quantity";
 
 interface Props {
 	book: Book;
@@ -8,6 +11,7 @@ interface Props {
 
 const ProductInfo = ({ book }: Props): ReactElement => {
 	const [selectedQuantity, setSelectedQuantity] = useState<number>(1);
+	const dispatch = useAppDispatch();
 
 	const handleIncrement = () => {
 		setSelectedQuantity((prevQuantity) => prevQuantity + 1);
@@ -33,29 +37,19 @@ const ProductInfo = ({ book }: Props): ReactElement => {
 					alt={book.title}
 				/>
 				<p className="pt-6 text-lg font-bold">Price: ${book.price}</p>
-				<p className="pt-4 mb-8 text-lg font-bold">
-					Quantity:
-					<button
-						disabled={selectedQuantity === 1}
-						onClick={handleDecrement}
-						className={`w-10 mx-4 text-2xl rounded
-              ${selectedQuantity === 1 ? "bg-gray-100" : "bg-secondary"}
-              `}
-					>
-						-
-					</button>
-					<span>{selectedQuantity}</span>
-					<button
-						disabled={selectedQuantity > 99}
-						onClick={handleIncrement}
-						className={`w-10 mx-4 text-2xl rounded
-            ${selectedQuantity > 99 ? "bg-gray-100" : "bg-secondary"}
-            `}
-					>
-						+
-					</button>
-				</p>
-				<button className="w-full px-4 py-2 bg-primary text-lg text-white rounded">
+				<div className="pt-2 mb-6">
+					<Quantity
+						quantity={selectedQuantity}
+						decrement={handleDecrement}
+						increment={handleIncrement}
+					/>
+				</div>
+				<button
+					onClick={() =>
+						dispatch(addToCart({ ...book, quantity: selectedQuantity }))
+					}
+					className="w-full px-4 py-2 bg-primary text-lg text-white rounded"
+				>
 					Add to Cart
 				</button>
 			</div>

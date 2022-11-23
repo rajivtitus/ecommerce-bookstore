@@ -9,6 +9,9 @@ export interface Book {
 	description: string;
 	coverImage: string;
 }
+export interface CartItem extends Book {
+	quantity: number;
+}
 
 export enum Paths {
 	Home = "/",
@@ -22,11 +25,4 @@ export enum NavItems {
 	Home = "Home",
 	Products = "Products",
 	Cart = "Cart",
-}
-
-export enum Status {
-	Idle = "idle",
-	Pending = "pending",
-	Fulfilled = "fulfilled",
-	Rejected = "rejected",
 }
