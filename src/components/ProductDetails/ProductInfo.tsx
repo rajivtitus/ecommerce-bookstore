@@ -23,9 +23,9 @@ const ProductInfo = ({ book }: Props): ReactElement => {
 
 	return (
 		<div className="flex gap-4 pb-8">
-			<div className="min-w-[580px] w-3/5 px-12 py-6 bg-gray-100 rounded">
+			<div className="min-w-[580px] w-3/5 px-12 py-6 bg-lightGray rounded">
 				<h3 className="py-1 font-lora text-3xl">{book.title}</h3>
-				<p className="py-1 italic text-lg text-gray-600">
+				<p className="py-1 italic text-lg text-darkGray">
 					By {book.author.name}
 				</p>
 				<p className="leading-7 whitespace-pre-line">{book.description}</p>

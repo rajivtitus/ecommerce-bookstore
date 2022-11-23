@@ -25,7 +25,7 @@ const CartRecord = ({ item }: Props): ReactElement => {
 	};
 
 	return (
-		<div className="flex items-center relative gap-10 px-8 py-4 mx-4 mb-8 bg-gray-100 rounded shadow-md">
+		<div className="flex items-center relative gap-10 px-8 py-4 mx-4 mb-8 bg-lightGray rounded shadow-md">
 			<div className="w-2/12 flex justify-center">
 				<img
 					className="w-3/4 xl:w-2/4 h-[10rem] object-fill rounded"
@@ -35,7 +35,7 @@ const CartRecord = ({ item }: Props): ReactElement => {
 			</div>
 			<div className="w-7/12">
 				<h3 className="font-lora text-2xl">{item.title}</h3>
-				<p className="py-1 italic text-lg text-gray-600">
+				<p className="py-1 italic text-lg text-darkGray">
 					By {item.author.name}
 				</p>
 				<p>

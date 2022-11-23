@@ -10,7 +10,7 @@ const Landing = (): ReactElement => {
 				<h2 className="mb-6 text-4xl font-lora leading-8">
 					Bookworm : The best e-commerce bookstore!
 				</h2>
-				<p className="px-36 mb-8 text-lg text-gray-600 leading-8">
+				<p className="px-36 mb-8 text-lg text-darkGray leading-8">
 					A good bookshop is not just about selling books from shelves, but
 					reaching out into the world and making a difference.
 					<span className="text-right block italic">~ David Almond</span>
