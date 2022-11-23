@@ -22,18 +22,18 @@ const Navbar = (): ReactElement => {
 	const { pathname } = useLocation();
 
 	return (
-		<nav>
-			<ul className="flex px-8 pt-4 mb-4">
+		<nav className="px-8 py-3 mb-4 bg-lightGray">
+			<ul className="flex ">
 				{NAV_ITEMS.map((link, index) => (
 					<li
 						key={index}
-						className="px-2 pb-2 mr-12 text-lg font-lora relative cursor-pointer"
+						className="px-2 pb-1 mr-12 text-lg font-lora relative cursor-pointer"
 					>
 						<Link to={link.path}>{link.name}</Link>
 						<span
 							className={
 								pathname === link.path
-									? `bg-primary absolute h-[3px] w-full bottom-0 left-0`
+									? `bg-primary absolute h-[2px] w-full bottom-0 left-0`
 									: ""
 							}
 						/>
