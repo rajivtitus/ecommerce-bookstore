@@ -9,6 +9,9 @@ export interface Book {
 	description: string;
 	coverImage: string;
 }
+export interface CartItem extends Book {
+	quantity: number;
+}
 
 export enum Paths {
 	Home = "/",
