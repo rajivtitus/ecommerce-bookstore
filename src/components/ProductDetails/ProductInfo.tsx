@@ -45,7 +45,9 @@ const ProductInfo = ({ book }: Props): ReactElement => {
 					/>
 				</div>
 				<button
-					onClick={() => dispatch(addToCart(book))}
+					onClick={() =>
+						dispatch(addToCart({ ...book, quantity: selectedQuantity }))
+					}
 					className="w-full px-4 py-2 bg-primary text-lg text-white rounded"
 				>
 					Add to Cart
