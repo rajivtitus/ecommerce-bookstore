@@ -4,6 +4,8 @@ import { Book } from "../../utils/types";
 import { useAppDispatch } from "../../app/hooks";
 import { addToCart } from "../../features/cart/cartSlice";
 import Quantity from "../Quantity";
+import useToast from "../Toast/useToast";
+import Toast from "../Toast/Toast";
 
 interface Props {
   book: Book;
@@ -12,6 +14,7 @@ interface Props {
 const ProductInfo = ({ book }: Props): ReactElement => {
   const [selectedQuantity, setSelectedQuantity] = useState<number>(1);
   const dispatch = useAppDispatch();
+  const { addToast } = useToast();
 
   const handleIncrement = () => {
     setSelectedQuantity((prevQuantity) => prevQuantity + 1);
@@ -19,6 +22,16 @@ const ProductInfo = ({ book }: Props): ReactElement => {
 
   const handleDecrement = () => {
     setSelectedQuantity((prevQuantity) => prevQuantity - 1);
+  };
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({ ...book, quantity: selectedQuantity }));
+    addToast({
+      type: "success",
+      message: "Successfully added item to cart!",
+      position: "bottomCenter",
+      duration: 1000,
+    });
   };
 
   return (
@@ -45,9 +58,7 @@ const ProductInfo = ({ book }: Props): ReactElement => {
           />
         </div>
         <button
-          onClick={() =>
-            dispatch(addToCart({ ...book, quantity: selectedQuantity }))
-          }
+          onClick={handleAddToCart}
           className="w-full px-4 py-2 bg-primary text-lg text-white rounded"
         >
           Add to Cart

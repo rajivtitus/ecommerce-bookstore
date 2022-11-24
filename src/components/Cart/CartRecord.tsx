@@ -8,6 +8,7 @@ import {
   removeItem,
 } from "../../features/cart/cartSlice";
 import Quantity from "../Quantity";
+import useToast from "../Toast/useToast";
 
 interface Props {
   item: CartItem;
@@ -15,6 +16,7 @@ interface Props {
 
 const CartRecord = ({ item }: Props): ReactElement => {
   const dispatch = useAppDispatch();
+  const { addToast } = useToast();
 
   const handleDecrement = () => {
     dispatch(decrementQuantity(item.id));
@@ -22,6 +24,16 @@ const CartRecord = ({ item }: Props): ReactElement => {
 
   const handleIncrement = () => {
     dispatch(incrementQuantity(item.id));
+  };
+
+  const handleDelete = () => {
+    dispatch(removeItem(item.id));
+    addToast({
+      type: "info",
+      message: "Successfully deleted product",
+      position: "bottomCenter",
+      duration: 1000,
+    });
   };
 
   return (
@@ -53,7 +65,7 @@ const CartRecord = ({ item }: Props): ReactElement => {
         />
       </div>
       <button
-        onClick={() => dispatch(removeItem(item.id))}
+        onClick={handleDelete}
         className="absolute top-0 right-0 px-4 py-2 text-xl font-bold bg-secondary rounded"
       >
         x
