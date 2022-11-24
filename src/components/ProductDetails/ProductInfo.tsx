@@ -6,6 +6,7 @@ import { addToCart } from "../../features/cart/cartSlice";
 import Quantity from "../Quantity";
 import useToast from "../Toast/useToast";
 import Toast from "../Toast/Toast";
+import Button from "../Button";
 
 interface Props {
   book: Book;
@@ -57,12 +58,9 @@ const ProductInfo = ({ book }: Props): ReactElement => {
             increment={handleIncrement}
           />
         </div>
-        <button
-          onClick={handleAddToCart}
-          className="w-full px-4 py-2 bg-primary text-lg text-white rounded"
-        >
-          Add to Cart
-        </button>
+        <Button onClick={handleAddToCart} className="w-full">
+          add to cart
+        </Button>
       </div>
     </div>
   );

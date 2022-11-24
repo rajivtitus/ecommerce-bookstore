@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Paths } from "../../utils/types";
 
 import coverImg from "../../assets/hero-img.png";
+import Button from "../Button";
 
 const Landing = (): ReactElement => {
   return (
@@ -18,9 +19,7 @@ const Landing = (): ReactElement => {
           <span className="block italic">~ David Almond</span>
         </p>
         <Link to={Paths.Products}>
-          <button className="px-4 py-2 bg-primary text-lg text-white rounded">
-            Explore Now
-          </button>
+          <Button>explore now</Button>
         </Link>
       </div>
       <div className="w-5/12">

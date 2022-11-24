@@ -2,8 +2,8 @@ import { ReactElement } from "react";
 
 interface Props {
   quantity: number;
-  increment(): any;
-  decrement(): any;
+  increment(): void;
+  decrement(): void;
 }
 
 const Quantity = ({ quantity, increment, decrement }: Props): ReactElement => {

@@ -7,6 +7,8 @@ import { useAppSelector } from "../app/hooks";
 import { calcCartTotal } from "../utils/helpers";
 import CartRecord from "../components/Cart/CartRecord";
 import { Paths } from "../utils/types";
+import Button from "../components/Button";
+import AlternateText from "../components/AlternateText";
 
 const Cart = (): ReactElement => {
   const cartItems = useAppSelector((state) => state.checkout.cart);
@@ -36,16 +38,11 @@ const Cart = (): ReactElement => {
           </div>
         </>
       ) : (
-        <div className="py-16 text-center">
-          <h4 className="mb-8 text-2xl ">
-            There are currently no items in your cart
-          </h4>
+        <AlternateText text="There are currently no items in your cart">
           <Link to={Paths.Products}>
-            <button className="px-4 py-2 bg-primary text-lg text-white rounded">
-              Shop Now
-            </button>
+            <Button>shop now</Button>
           </Link>
-        </div>
+        </AlternateText>
       )}
     </Layout>
   );

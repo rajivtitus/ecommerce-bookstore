@@ -9,7 +9,7 @@ import ProductDetails from "./pages/ProductDetails";
 import ErrorPage from "./pages/ErrorPage";
 import { useAppDispatch } from "./app/hooks";
 import { fetchBooks } from "./features/books/booksSlice";
-import useToast, { ToastProvider } from "./components/Toast/useToast";
+import { ToastProvider } from "./components/Toast/useToast";
 
 function App() {
   const dispatch = useAppDispatch();

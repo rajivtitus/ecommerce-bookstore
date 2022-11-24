@@ -5,13 +5,13 @@ import getBooks from "../../api/getBooks";
 
 interface State {
   books: Book[];
-  loading: boolean;
+  isLoading: boolean;
   error: string | null | undefined;
 }
 
 const initialState: State = {
   books: [],
-  loading: false,
+  isLoading: false,
   error: null,
 };
 
@@ -27,16 +27,16 @@ const booksSlice = createSlice({
   extraReducers(builder) {
     builder
       .addCase(fetchBooks.pending, (state) => {
-        state.loading = true;
+        state.isLoading = true;
       })
       .addCase(fetchBooks.fulfilled, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.books = action.payload;
       })
       // The below case will never be met since we are always resolving the getBooks promise
       // In a real world scenario, we would handle the rejected case as well
       .addCase(fetchBooks.rejected, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.error = action.error.message;
       });
   },
