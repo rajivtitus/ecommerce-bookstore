@@ -11,35 +11,35 @@ import { useAppDispatch } from "./app/hooks";
 import { fetchBooks } from "./features/books/booksSlice";
 
 function App() {
-	const dispatch = useAppDispatch();
-	const router = createBrowserRouter([
-		{
-			path: Paths.Home,
-			element: <Home />,
-		},
-		{
-			path: Paths.Products,
-			element: <Products />,
-		},
-		{
-			path: Paths.Cart,
-			element: <Cart />,
-		},
-		{
-			path: Paths.ProductDetails,
-			element: <ProductDetails />,
-		},
-		{
-			path: Paths.Other,
-			element: <ErrorPage />,
-		},
-	]);
+  const dispatch = useAppDispatch();
+  const router = createBrowserRouter([
+    {
+      path: Paths.Home,
+      element: <Home />,
+    },
+    {
+      path: Paths.Products,
+      element: <Products />,
+    },
+    {
+      path: Paths.Cart,
+      element: <Cart />,
+    },
+    {
+      path: Paths.ProductDetails,
+      element: <ProductDetails />,
+    },
+    {
+      path: Paths.Other,
+      element: <ErrorPage />,
+    },
+  ]);
 
-	useEffect(() => {
-		dispatch(fetchBooks());
-	}, []);
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
 
-	return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
