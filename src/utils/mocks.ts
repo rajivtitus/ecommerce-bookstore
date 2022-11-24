@@ -8,6 +8,8 @@ export const mockBooks: Book[] = [
 			name: "James Clear",
 			image:
 				"https://user-images.githubusercontent.com/75184965/203395281-66ce923c-cc89-4eb0-a04c-8b85baac49f7.jpg",
+			bio: `James Clear is a writer and speaker focused on habits, decision making, and continuous improvement. He is the author of the no. 1 New York Times bestseller, Atomic Habits. The book has sold over 5 million copies worldwide and has been translated into more than 50 languages. \n
+			Clear is a regular speaker at Fortune 500 companies and his work has been featured in places like Time magazine, the New York Times, the Wall Street Journal and on CBS This Morning. His popular "3-2-1" email newsletter is sent out each week to more than 1 million subscribers. \n`,
 		},
 		price: 21.66,
 		description: `No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results. \n
@@ -24,7 +26,9 @@ export const mockBooks: Book[] = [
 			name: "Prince Harry",
 			image:
 				"https://user-images.githubusercontent.com/75184965/203395261-5dc89ace-7406-4d07-ad06-529891af2196.jpeg",
+			bio: "",
 		},
+
 		price: 31.36,
 		description: `It was one of the most searing images of the twentieth century: two young boys, two princes, walking behind their mother’s coffin as the world watched in sorrow—and horror. As Diana, Princess of Wales, was laid to rest, billions wondered what the princes must be thinking and feeling—and how their lives would play out from that point on. \n
       For Harry, this is that story at last. \n
@@ -39,6 +43,7 @@ export const mockBooks: Book[] = [
 			name: "David Goggins",
 			image:
 				"https://user-images.githubusercontent.com/75184965/203395279-db54f538-91b3-4774-b879-9c982b5a49c0.jpg",
+			bio: "",
 		},
 		price: 30.19,
 		description:
@@ -53,6 +58,7 @@ export const mockBooks: Book[] = [
 			name: "Michael Connelly",
 			image:
 				"https://user-images.githubusercontent.com/75184965/203395260-d3d53486-1f78-4f70-ac2c-7d4a9f1315fa.jpg",
+			bio: "",
 		},
 		price: 33.77,
 		description: `A year has passed since LAPD detective Renée Ballard quit the force in the face of misogyny, demoralization, and endless red tape. But after the chief of police himself tells her she can write her own ticket within the department, Ballard takes back her badge, leaving “the Late Show” to rebuild and lead the cold case unit at the elite Robbery-Homicide Division. \n
@@ -70,6 +76,7 @@ export const mockBooks: Book[] = [
 			name: "T A Williams",
 			image:
 				"https://user-images.githubusercontent.com/75184965/203395266-870cc1fe-1ca5-4e3a-91c4-56fcbb3c8ffa.jpg",
+			bio: "",
 		},
 		price: 38.47,
 		description: `
