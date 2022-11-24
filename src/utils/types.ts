@@ -14,6 +14,11 @@ export interface CartItem extends Book {
   quantity: number;
 }
 
+export interface NavLink {
+  name: string;
+  path: string;
+}
+
 export enum Paths {
   Home = "/",
   Cart = "/cart",

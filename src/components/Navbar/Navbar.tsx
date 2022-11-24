@@ -1,9 +1,12 @@
 import { ReactElement } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-import { NavItems, Paths } from "../utils/types";
+import { NavItems, NavLink, Paths } from "../../utils/types";
+import NavItem from "./NavItem";
+import { useAppSelector } from "../../app/hooks";
+import { calcCartQuantity } from "../../utils/helpers";
 
-const NAV_ITEMS = [
+const NAV_ITEMS: NavLink[] = [
   {
     name: NavItems.Home,
     path: Paths.Home,
@@ -20,24 +23,19 @@ const NAV_ITEMS = [
 
 const Navbar = (): ReactElement => {
   const { pathname } = useLocation();
+  const cartItems = useAppSelector((state) => state.checkout.cart);
+  const totalCount = calcCartQuantity(cartItems);
 
   return (
     <nav className="px-8 py-3 mb-4 bg-lightGray">
       <ul className="flex ">
         {NAV_ITEMS.map((link, index) => (
-          <li
+          <NavItem
+            link={link}
+            path={pathname}
+            cartCount={totalCount}
             key={index}
-            className="px-2 pb-1 mr-12 text-lg font-lora relative cursor-pointer"
-          >
-            <Link to={link.path}>{link.name}</Link>
-            <span
-              className={
-                pathname === link.path
-                  ? `bg-primary absolute h-[2px] w-full bottom-0 left-0`
-                  : ""
-              }
-            />
-          </li>
+          />
         ))}
       </ul>
     </nav>

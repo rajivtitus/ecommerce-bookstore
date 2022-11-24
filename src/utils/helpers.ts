@@ -26,3 +26,10 @@ export const getMonthName = (): string => {
   const currMonth = new Date().getMonth();
   return MONTHS[currMonth];
 };
+
+export const calcCartQuantity = (items: CartItem[]): number => {
+  return items.reduce((sum, cur: CartItem) => {
+    const { quantity } = cur;
+    return (sum += quantity);
+  }, 0);
+};
