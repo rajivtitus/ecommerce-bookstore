@@ -13,6 +13,8 @@
 
 Project Link: https://ecommerce-bookstore.netlify.app
 
+Project Video: https://www.loom.com/share/9751bec5221844218e94faefc7ff9159
+
 
 # Overview
 
