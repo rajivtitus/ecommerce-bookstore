@@ -23,7 +23,7 @@ const Featured = (): ReactElement => {
 							{book.author.name}
 						</h3>
 						<img
-							className="w-40 h-40 rounded-full absolute top-4 left-4"
+							className="w-40 h-40 rounded-full absolute top-4 left-4 border-solid border-medGray border-4"
 							src={book.author.image}
 							alt="Rounded avatar"
 						/>
