@@ -5,8 +5,8 @@ import { useAppDispatch } from "../../app/hooks";
 import { addToCart } from "../../features/cart/cartSlice";
 import Quantity from "../Quantity";
 import useToast from "../Toast/useToast";
+import Toast from "../Toast/Toast";
 import Button from "../Button";
-import Heading from "../Heading";
 
 interface Props {
 	book: Book;
@@ -38,7 +38,7 @@ const ProductInfo = ({ book }: Props): ReactElement => {
 	return (
 		<div className="flex gap-4 pb-8">
 			<div className="min-w-[525px] w-3/5 px-12 py-6 bg-lightGray rounded">
-				<Heading size="3xl" component="h3" text={book.title} />
+				<h3 className="py-1 font-lora text-3xl">{book.title}</h3>
 				<p className="py-1 italic text-lg text-darkGray">
 					By {book.author.name}
 				</p>
