@@ -24,10 +24,13 @@ const Featured = (): ReactElement => {
 
 			{book ? (
 				<div>
-					<div className="h-16 bg-lightGray rounded relative">
-						<h3 className="py-4 ml-48 font-lora text-2xl">
-							{book.author.name}
-						</h3>
+					<div className="h-14 bg-lightGray rounded relative">
+						<Heading
+							className="ml-48"
+							component="h3"
+							size="2xl"
+							text={book.author.name}
+						/>
 						<img
 							className="w-40 h-40 rounded-full absolute top-4 left-4 border-solid border-medGray border-4"
 							src={book.author.image}
@@ -39,16 +42,24 @@ const Featured = (): ReactElement => {
 						{book.author.bio}
 					</p>
 
-					<h3 className="py-4 font-lora text-2xl">
-						Books By {book.author.name}
-					</h3>
+					<Heading
+						className="mb-2"
+						component="h3"
+						size="2xl"
+						text={`Books By ${book.author.name}`}
+					/>
 					<hr className="mb-8 font-bold h-4" />
 					<div className="flex">
 						<div className="min-w-[350px] max-w-[400px] mx-auto h-[25rem] w-2/5 px-12">
 							<img className="rounded" src={book.coverImage} alt={book.title} />
 						</div>
 						<div>
-							<h4 className="py-4 font-lora text-xl">{book.title}</h4>
+							<Heading
+								className="mb-2"
+								component="h4"
+								size="xl"
+								text={book.title}
+							/>
 							<p className="mb-6 leading-7 whitespace-pre-line">
 								{book.description.length > 500
 									? book.description.substring(0, 500) + "..."
