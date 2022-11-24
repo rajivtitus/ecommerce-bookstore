@@ -9,42 +9,42 @@ import ProductDetails from "./pages/ProductDetails";
 import ErrorPage from "./pages/ErrorPage";
 import { useAppDispatch } from "./app/hooks";
 import { fetchBooks } from "./features/books/booksSlice";
-import useToast, { ToastProvider } from "./components/Toast/useToast";
+import { ToastProvider } from "./components/Toast/useToast";
 
 function App() {
-  const dispatch = useAppDispatch();
-  const router = createBrowserRouter([
-    {
-      path: Paths.Home,
-      element: <Home />,
-    },
-    {
-      path: Paths.Products,
-      element: <Products />,
-    },
-    {
-      path: Paths.Cart,
-      element: <Cart />,
-    },
-    {
-      path: Paths.ProductDetails,
-      element: <ProductDetails />,
-    },
-    {
-      path: Paths.Other,
-      element: <ErrorPage />,
-    },
-  ]);
+	const dispatch = useAppDispatch();
+	const router = createBrowserRouter([
+		{
+			path: Paths.Home,
+			element: <Home />,
+		},
+		{
+			path: Paths.Products,
+			element: <Products />,
+		},
+		{
+			path: Paths.Cart,
+			element: <Cart />,
+		},
+		{
+			path: Paths.ProductDetails,
+			element: <ProductDetails />,
+		},
+		{
+			path: Paths.Other,
+			element: <ErrorPage />,
+		},
+	]);
 
-  useEffect(() => {
-    dispatch(fetchBooks());
-  }, []);
+	useEffect(() => {
+		dispatch(fetchBooks());
+	}, []);
 
-  return (
-    <ToastProvider>
-      <RouterProvider router={router} />;
-    </ToastProvider>
-  );
+	return (
+		<ToastProvider>
+			<RouterProvider router={router} />;
+		</ToastProvider>
+	);
 }
 
 export default App;

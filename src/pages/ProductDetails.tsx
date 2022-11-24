@@ -6,6 +6,7 @@ import ProductInfo from "../components/ProductDetails/ProductInfo";
 import { useAppSelector } from "../app/hooks";
 import LoadingSpinner from "../components/LoadingSpinner";
 import ErrorPage from "./ErrorPage";
+import AlternateText from "../components/AlternateText";
 
 type ProductParams = {
 	id?: string;
@@ -22,11 +23,7 @@ const ProductDetails = (): ReactElement => {
 				book ? (
 					<ProductInfo book={book} />
 				) : (
-					<div className="py-16 text-center">
-						<h4 className="mb-8 text-2xl ">
-							No product found, please try again later.
-						</h4>
-					</div>
+					<AlternateText text="No product found, please try again later." />
 				)
 			) : (
 				<LoadingSpinner />
