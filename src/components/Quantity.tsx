@@ -21,9 +21,7 @@ const Quantity = ({ quantity, increment, decrement }: Props): ReactElement => {
 			<button
 				disabled={quantity > 99}
 				onClick={increment}
-				className={`w-10 mx-4 text-xl rounded
-            ${quantity > 99 ? "bg-gray-100" : "bg-secondary"}
-            `}
+				className="w-10 mx-4 text-xl rounded bg-secondary"
 			>
 				+
 			</button>
