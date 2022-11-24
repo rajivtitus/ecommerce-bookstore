@@ -9,6 +9,7 @@ import CartRecord from "../components/Cart/CartRecord";
 import { Paths } from "../utils/types";
 import Button from "../components/Button";
 import AlternateText from "../components/AlternateText";
+import Heading from "../components/Heading";
 
 const Cart = (): ReactElement => {
 	const cartItems = useAppSelector((state) => state.checkout.cart);
@@ -16,9 +17,12 @@ const Cart = (): ReactElement => {
 
 	return (
 		<Layout>
-			<h2 className="py-2 mb-8 text-center font-lora text-3xl">
-				Your Shopping Cart
-			</h2>
+			<Heading
+				className="text-center mb-8"
+				component="h1"
+				text="Your Shopping Cart"
+				size="3xl"
+			/>
 			{cartItems.length ? (
 				<>
 					<div

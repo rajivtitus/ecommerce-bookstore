@@ -5,6 +5,7 @@ import { Paths } from "../../utils/types";
 
 import coverImg from "../../assets/hero-img.png";
 import Button from "../Button";
+import Heading from "../Heading";
 
 const Landing = (): ReactElement => {
 	return (

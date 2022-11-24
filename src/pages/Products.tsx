@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import { useAppSelector } from "../app/hooks";
 import ProductCard from "../components/Products/ProductCard";
 import CardLoadingSkeleton from "../components/Products/CardLoadingSkeleton";
+import Heading from "../components/Heading";
 import AlternateText from "../components/AlternateText";
 
 const Products = (): ReactElement => {
@@ -12,7 +13,12 @@ const Products = (): ReactElement => {
 
 	return (
 		<Layout>
-			<h2 className="py-2 mb-8 text-center font-lora text-3xl">Products</h2>
+			<Heading
+				className="text-center mb-8"
+				component="h2"
+				text="Products"
+				size="3xl"
+			/>
 			<div className="grid grid-cols-2 content-center xl:grid-cols-3 gap-20 px-6 pb-12">
 				{!isLoading ? (
 					books.length ? (
