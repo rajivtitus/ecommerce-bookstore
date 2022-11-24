@@ -23,7 +23,7 @@ const ProductInfo = ({ book }: Props): ReactElement => {
 
 	return (
 		<div className="flex gap-4 pb-8">
-			<div className="min-w-[580px] w-3/5 px-12 py-6 bg-lightGray rounded">
+			<div className="min-w-[525px] w-3/5 px-12 py-6 bg-lightGray rounded">
 				<h3 className="py-1 font-lora text-3xl">{book.title}</h3>
 				<p className="py-1 italic text-lg text-darkGray">
 					By {book.author.name}
@@ -32,7 +32,7 @@ const ProductInfo = ({ book }: Props): ReactElement => {
 			</div>
 			<div className="min-w-[350px] max-w-[400px] mx-auto h-[25rem] w-2/5 px-12">
 				<img
-					className="w-full h-full object-fill rounded"
+					className="object-fill rounded"
 					src={book.coverImage}
 					alt={book.title}
 				/>

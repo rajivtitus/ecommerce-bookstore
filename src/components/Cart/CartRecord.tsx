@@ -33,7 +33,7 @@ const CartRecord = ({ item }: Props): ReactElement => {
 					alt={item.title}
 				/>
 			</div>
-			<div className="w-7/12">
+			<div className="w-6/12 xl:w-7/12">
 				<h3 className="font-lora text-2xl">{item.title}</h3>
 				<p className="py-1 italic text-lg text-darkGray">
 					By {item.author.name}
@@ -44,7 +44,7 @@ const CartRecord = ({ item }: Props): ReactElement => {
 						: item.description}
 				</p>
 			</div>
-			<div className="w-3/12 flex flex-col">
+			<div className="w-4/12 xl:w-3/12 flex flex-col">
 				<p className="text-lg font-bold">Price: ${item.price.toFixed(2)}</p>
 				<Quantity
 					quantity={item.quantity}

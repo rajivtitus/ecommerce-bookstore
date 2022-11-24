@@ -19,14 +19,14 @@ const Cart = (): ReactElement => {
 			{cartItems.length ? (
 				<>
 					<div
-						className={`min-w-[950px] 
+						className={`min-w-[875px] 
 						${cartItems.length > 2 ? "h-3/5" : ""} overflow-auto`}
 					>
 						{cartItems.map((item) => (
 							<CartRecord item={item} key={item.id} />
 						))}
 					</div>
-					<div className="flex justify-end items-center gap-8 py-8 px-16 xl:px-24 2xl:px-36">
+					<div className="flex justify-end items-center gap-8 py-8 mr-14 lg:mr-24 xl:mr-30">
 						<p className="px-4 py-2 text-xl font-bold bg-primary text-white rounded ">
 							Total Price:
 						</p>

@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Paths } from "./utils/types";
-import Home from "./routes/Home";
-import Products from "./routes/Products";
-import Cart from "./routes/Cart";
-import ProductDetails from "./routes/ProductDetails";
-import ErrorPage from "./routes/ErrorPage";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Cart from "./pages/Cart";
+import ProductDetails from "./pages/ProductDetails";
+import ErrorPage from "./pages/ErrorPage";
 import { useAppDispatch } from "./app/hooks";
 import { fetchBooks } from "./features/books/booksSlice";
 

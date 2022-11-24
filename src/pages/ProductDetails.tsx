@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import Layout from "../components/Layout";
 import ProductInfo from "../components/ProductDetails/ProductInfo";
-import { useAppSelector } from ".././app/hooks";
+import { useAppSelector } from "../app/hooks";
 
 type ProductParams = {
 	id?: string;
